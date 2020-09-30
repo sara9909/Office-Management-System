@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="default.aspx" title="Home Page"  description="">
+		<siteMapNode url="" title="Batches">
+			<siteMapNode url="addbatch.aspx" title="Add Batch"  description="" />
+			<siteMapNode url="cancelbatch.aspx" title="Cancel Batch"  description="" />
+			<siteMapNode url="completebatch.aspx" title="Completed Batch"  description="" />
+
+		</siteMapNode>
+
+		<siteMapNode url="searchstudents.aspx" title="Search Students"  description="" />
+		<siteMapNode url="Reports.aspx" title="Reports"  description="">
+			<siteMapNode url="paymentsbydate.aspx" title="Payments By Date"  description="" />
+			<siteMapNode url="paymentsbybatch.aspx" title="Payments By Batch"  description="" />
+		</siteMapNode>
+    </siteMapNode>
+</siteMap>

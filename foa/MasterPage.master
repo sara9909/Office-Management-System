@@ -1,0 +1,48 @@
+<%@ Master Language="C#" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        lblUser.Text = Session["fullname"].ToString();
+    }
+
+    protected void lbLogout_Click(object sender, EventArgs e)
+    {
+        FormsAuthentication.SignOut();
+        Response.Redirect("login.aspx");
+    }
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table width="100%" height="600px">
+            <tr valign="top">
+                <td width="20%" bgcolor="gainsboro" >
+                    <asp:Label ID="lblUser" runat="server" Font-Bold="True"></asp:Label><br />
+                    <br />
+                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" ShowLines="True">
+                        <HoverNodeStyle BackColor="White" BorderColor="Red" BorderWidth="1px" />
+                    </asp:TreeView>
+                    <br />
+                    <asp:LinkButton ID="lbLogout" runat="server" OnClick="lbLogout_Click">Logout</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

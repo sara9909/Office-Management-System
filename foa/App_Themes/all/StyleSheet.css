@@ -1,0 +1,27 @@
+﻿body
+{
+    font-size: 11pt;
+    font-family: verdana;
+    background-color: #ffffff;
+    margin:0px;
+}
+
+h1
+{
+    font-weight: bold;
+    font-size: 30pt;
+    color: #ffffff;
+    font-family: arial;
+    background-color: #003366;
+    margin:0px;
+    letter-spacing:5pt;
+    text-align:center;
+}
+h2
+{
+    font-weight: bold;
+    font-size: 20pt;
+    color: #666666;
+    font-family: arial;
+    margin: 0px;
+}
